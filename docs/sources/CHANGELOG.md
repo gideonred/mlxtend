@@ -7,12 +7,43 @@ The CHANGELOG for the current development version is available at
 
 ---
 
+### Version 0.25.0  (TBD)
+
+##### Downloads
+
+- [Source code (zip)](https://github.com/rasbt/mlxtend/archive/v0.25.0.zip)
+
+- [Source code (tar.gz)](https://github.com/rasbt/mlxtend/archive/v0.25.0.tar.gz)
+
 ##### Changes
 
-  - [`mlxtend/classifier/stacking_cv_classification.py`](https://github.com/rasbt/mlxtend/blob/master/mlxtend/classifier/stacking_cv_classification.py) and [`mlxtend/regressor/stacking_cv_regression.py`](https://github.com/rasbt/mlxtend/blob/master/mlxtend/regressor/stacking_cv_regression.py)
+- Removed explicit `multi_class="multinomial"` arguments, which are deprecated in newer versions of scikit-learn, from LogisticRegression usage in examples / notebooks / tests ([#1147](https://github.com/rasbt/mlxtend/issues/1147) via [sachinn854](https://github.com/sachinn854))
+
+- Added multiprocessing support for apriori via the `n_jobs` parameter ([#1151](https://github.com/rasbt/mlxtend/issues/1151) via [mariam851](https://github.com/mariam851))
+
+- Fixes an edge-case bug where decision regions plots didn't have unique colors ([#1157](https://github.com/rasbt/mlxtend/issues/1157) via [mariam851](https://github.com/mariam851))
+
+- `bias_variance_decomp` now accepts pandas DataFrames and Series as input, in addition to NumPy arrays. ([#1070](https://github.com/rasbt/mlxtend/issues/1070) via [berns722](https://github.com/berns722))
+
+
+### Version 0.24.0  (13 Dec 2025)
+
+##### Downloads
+
+- [Source code (zip)](https://github.com/rasbt/mlxtend/archive/v0.24.0.zip)
+
+- [Source code (tar.gz)](https://github.com/rasbt/mlxtend/archive/v0.24.0.tar.gz)
+
+
+##### Changes
+
+- Compatibility with latest scikit-learn (1.8.0) and pandas versions (2.3.3)
+- [`mlxtend/classifier/stacking_cv_classification.py`](https://github.com/rasbt/mlxtend/blob/master/mlxtend/classifier/stacking_cv_classification.py) and [`mlxtend/regressor/stacking_cv_regression.py`](https://github.com/rasbt/mlxtend/blob/master/mlxtend/regressor/stacking_cv_regression.py)
       - Modified `meta_features` to ensure compatibility with *scikit-learn* versions 1.4 and above by dynamically selecting between `fit_params` and `params` in `cross_val_predict`.
 
-### Version 0.24.4  (25 Nov 2025)
+---
+
+### Version 0.23.4  (25 Nov 2024)
 
 ##### Downloads
 

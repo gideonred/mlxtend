@@ -1,4 +1,4 @@
-# Sebastian Raschka 2014-2024
+# Sebastian Raschka 2014-2026
 # mlxtend Machine Learning Library Extensions
 # Author: Sebastian Raschka <sebastianraschka.com>
 #
@@ -526,7 +526,7 @@ def test_clone_params_fail():
                     update = self.eta * (y_data[idx] - self._to_classlabels(X[idx]))
                     self.w_ += (update * X[idx]).reshape(self.w_.shape)
                     self.b_ += update
-                    errors += int(update != 0.0)
+                    errors += int(update.item() != 0.0)
 
                 if self.print_progress:
                     self.print_progress(
